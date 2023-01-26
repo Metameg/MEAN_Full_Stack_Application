@@ -1,0 +1,53 @@
+
+{
+     
+    "latestBlogs": {
+        "blogs": [
+                    {
+                        "title": "2023 Best Beaches Contest Winners",
+                        "date":  "April 2, 2023",
+                        "start": "2023-04-2T00:00:00Z",
+                        "description": "<p>Integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat volutpat. Nunc nisi mi, elementum sit amet...</p>"
+                    },
+                    {
+                        "title": "Top 10 Diving Spots",
+                        "date":  "May 29, 2023",
+                        "start": "2023-05-29T00:00:00Z",
+                        "description": "<p>Maecenas scelerisque odio quis arcu fringilla malesuada. Nulla facilisi. In libero nulla, fermentum ut pretium ac, pharetra et eros...</p>" 
+                    }
+        ]
+    },
+
+    "testimonials": {
+        "quotes": [
+                    { 
+                        "autor": "- <a href=\"/\">Juan De La Lopez</a>",
+                        "description": "\"In hac habitasse platea dictumst. Integer purus justo, egestas eu consectetur eu, cursus in tortor. Quisque nec nunc ac mi ultrices iaculis. Aenean quis elit mauris, nec vestibulum lorem.\""
+                    }
+        ]
+    },
+
+    "sidePanel": {
+        "panels": [
+                    { 
+                        "href": "/rooms",
+                        "image": "images/rooms.png",
+                        "alt": "Rooms"
+                    },
+                    { 
+                        "href": "/travel",
+                        "image": "images/dive-site.png",
+                        "alt": "Travel"
+                    },
+                    { 
+                        "href": "/meals",
+                        "image": "images/food.png",
+                        "alt": "Food"
+                    }
+        ]
+    }
+
+
+    
+
+}

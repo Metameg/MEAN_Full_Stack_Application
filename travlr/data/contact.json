@@ -1,0 +1,23 @@
+
+{
+     
+    "tr1": {
+        "name": "Name:",
+        "type": "text",
+        "class": "textfield"
+    },
+
+    "tr2": {
+        "name": "Email:",
+        "type": "text",
+        "class": "textfield"
+    },
+
+    "tr3": {
+        "name": "Subject:",
+        "type": "text",
+        "class": "textfield"
+    }
+    
+
+}

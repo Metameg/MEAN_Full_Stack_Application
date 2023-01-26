@@ -5,6 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
 
+//You’re not going to export any functions from travlr.js,
+// so you don’t need to assign it to a variable when you require it
+require('./app_server/database/db');  
+
+// Import Routers
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var travelRouter = require('./app_server/routes/travel');

@@ -18,22 +18,20 @@
 							<form action="/" method="post">
 								<table>
 									<tbody>
-										<tr>
-											<td>Name:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td>Email:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td>Subject:</td>
-											<td><input type="text" value="" class="txtfield"></td>
-										</tr> <tr>
-											<td class="txtarea">Message:</td>
-											<td><textarea></textarea></td>
-										</tr> <tr>
-											<td></td>
-											<td><input type="submit" value="" class="btn"></td>
-										</tr>
+										{{#each rows}}
+											<tr>
+												<td>{{this.name}}</td>
+												<td><input type={{this.type}} value="" class={{this.class}}></td>
+											</tr>  
+										{{/each}}
+											<tr>
+												<td class="txtarea">Message:</td>
+												<td><textarea></textarea></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td><input type="submit" value="" class="btn"></td>
+											</tr>
 									</tbody>
 								</table>
 							</form>
