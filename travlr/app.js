@@ -5,9 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
 
-//You’re not going to export any functions from travlr.js,
-// so you don’t need to assign it to a variable when you require it
-require('./app_server/database/db');  
+require('./app_api/database/db');
+  
 
 // Import Routers
 var indexRouter = require('./app_server/routes/index');
@@ -19,6 +18,7 @@ var mealsRouter = require('./app_server/routes/meals');
 var newsRouter = require('./app_server/routes/news');
 var roomsRouter = require('./app_server/routes/rooms');
 
+const apiRouter = require('./app_api/routes/index');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -41,6 +41,8 @@ app.use('/contact', contactRouter);
 app.use('/meals', mealsRouter);
 app.use('/news', newsRouter);
 app.use('/rooms', roomsRouter);
+
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -16,10 +16,7 @@
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
-
     "hbs": "^4.2.0",
-
     "seedgoose": "^2.0.2"
-
   }
 }

@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1';
-const dbURI = `mongodb://${host}/travlr`
+// const host = process.env.DB_HOST || '127.0.0.1';
+// const dbURI = `mongodb://${host}/travlr`
 const readLine = require('readline');
 
-// let dbURL = 'mongodb://127.0.0.1/travlr';
-// if (process.env.NODE_ENV === 'production') {
-//   dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
-// }
+let dbURL = 'mongodb://127.0.0.1/travlr';
+if (process.env.NODE_ENV === 'production') {
+  dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
+}
 
 const connect = () => {
-    setTimeout(() => mongoose.connect(dbURI, 
+    setTimeout(() => mongoose.connect(dbURL, 
     { useNewUrlParser: true, 
         useCreateIndex: true, 
-        useUnifiedTopology: true }), 1000);
+        useUnifiedTopology: true,
+    }), 1000);
 }
 
 mongoose.connection.on('connected', () => {
@@ -28,12 +29,12 @@ mongoose.connection.on('disconnected', () => {
   console.log('disconnected');
 });
 
-// For nodemon restarts
-process.once('SIGUSR2', () => {                        1
-    gracefulShutdown('nodemon restart', () => {          2
-      process.kill(process.pid, 'SIGUSR2');              2
-    });
-  });
+// // For nodemon restarts
+// process.once('SIGUSR2', () => {                        1
+//     gracefulShutdown('nodemon restart', () => {          2
+//       process.kill(process.pid, 'SIGUSR2');              2
+//     });
+//   });
 
 // For app termination
 if (process.platform === 'win32') {
